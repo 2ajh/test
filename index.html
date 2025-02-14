@@ -3,17 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página</title>
+    <title>Home - New Retro Wave</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #1a1a2e, #16213e);
+            color: #ff0080;
             text-align: center;
-            margin: 50px;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .container {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1 {
+            font-size: 3em;
+            text-transform: uppercase;
+            text-shadow: 0 0 20px #ff0080, 0 0 40px #ff00ff;
+        }
+        p {
+            font-size: 1.5em;
+        }
+        .car {
+            width: 60%;
+            max-width: 600px;
+            animation: moveCar 5s linear infinite alternate;
+        }
+        @keyframes moveCar {
+            0% { transform: translateX(-10px); }
+            100% { transform: translateX(10px); }
+        }
+        .neon-light {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 0, 128, 0.1);
+            box-shadow: 0 0 50px #ff0080 inset;
         }
     </style>
 </head>
 <body>
-    <h1>Bienvenido a mi página</h1>
-    <p>Esta es una página HTML básica.</p>
+    <div class="container">
+        <h1>Bienvenido al futuro</h1>
+        <p>La estética del neón y los coches veloces te esperan.</p>
+        <img src="https://example.com/neon-car.png" alt="Coche retro wave" class="car">
+        <div class="neon-light"></div>
+    </div>
 </body>
 </html>
